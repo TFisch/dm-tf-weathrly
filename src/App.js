@@ -8,13 +8,20 @@ import Search from './Search.js'
 
 console.log(data)
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      searchedLocation: '',
+      weatherData: data
 
     }
+
+    this.setLocation = this.setLocation.bind(this)
+  }
+
+  setLocation(search) {
+    this.setState({ searchedLocation: search.userLocationInput })
   }
 
 
@@ -22,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <Welcome />
-        <Search />
+        <Search searchedLocation={this.state.searchedLocation} setLocation={this.setLocation} />
         <CurrentWeather />
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -33,4 +40,3 @@ class App extends Component {
   }
 }
 
-export default App;
