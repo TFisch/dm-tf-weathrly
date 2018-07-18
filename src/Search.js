@@ -13,7 +13,7 @@ export default class Search extends Component {
 		return(
 			<div>	
 				<input type="text"/>
-				<button></button>
+				<button>submit</button>
 			</div>
 		)
 	}
