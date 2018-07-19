@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
 import './SevenHours.css'
 
-class SevenHours extends Component {
-  constructor(props) {
+export default class SevenHours extends Component {
+  constructor() {
     super();
 
   }
 
   render(){
     return 
-      <div class="seven-day-display">
-        <h1 class="hour">"Hour"</h1>
-        <h1 class="proj-temp">"Temp"</h1>
-        
-      </div>
+      <li class="seven-day-display">
+        <h1 class="hour">"Hour"{this.props.time}</h1>
+        <h1 class="proj-temp">"Temp"{this.props.temp}</h1>
+      </li>
   }
 
 }
