@@ -1,7 +1,0 @@
-import React from 'react';
-import SevenHours from './SevenHours'
-
-
-export default function SevenHourDisplay (props) {
-  
-}

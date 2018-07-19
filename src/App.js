@@ -5,6 +5,7 @@ import CurrentWeather from './CurrentWeather';
 import Key from './Key'
 import Search from './Search.js'
 import filterWeather from './FilterWeatherData'
+import SevenHourDisplay from './SevenHourDisplay'
 
 
 export default class App extends Component {
@@ -59,6 +60,7 @@ export default class App extends Component {
         low={this.state.low}
         summary={this.state.summary}
         />
+        <SevenHourDisplay sevenHourCast={this.state.sevenHourCast} />
        
       </div>
     );
