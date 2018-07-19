@@ -4,17 +4,16 @@ import './CurrentWeather.css'
 
 
 class CurrentWeather extends Component {
-  constructor() {
+  constructor(props) {
 		super();
-		this.state = {
-			currentCity: '',
-			currentCondition: '',
-			currentDay: '',
-			currentTemp: 0,
-			currentHigh: 0,
-			currentLow: 0,
-			forcastSummary: ''
-		}
+			// this.currentCity = '',
+			// this.currentCondition = '',
+			// this.currentDay = '',
+			// this.currentTemp = 0,
+			// this.currentHigh = 0,
+			// this.currentLow = 0,
+			// this.forcastSummary = ''
+		
 	}
 
 	// updateState = () => {
@@ -24,13 +23,13 @@ class CurrentWeather extends Component {
 	render() {
 		return(
 			<div className="weather-card">	
-				<h1>State</h1>
-				<h1>Current Weather</h1>
-				<h1>Day</h1>
-				<h1>Current Temp</h1>
-				<h1>Current High</h1>
-				<h1>Current Low</h1>
-				<h1>Summary</h1>
+				{/* <h1>State {this.currentCity}</h1>
+				<h1>Current Weather {this.currentCondition}</h1>
+				<h1>Day {this.currentDay}</h1>
+				<h1>Current Temp {this.currentTemp}</h1>
+				<h1>Current High {this.currentHigh}</h1>
+				<h1>Current Low {this.currentLow}</h1>
+				<h1>Summary {this.forcastSummary}</h1> */}
 			</div>
 		)
 	}
