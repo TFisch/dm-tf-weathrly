@@ -8,6 +8,20 @@ function filterWeather (data) {
 		 summary: data.forecast.txt_forecast.forecastday[0].fcttext
 	}
 
+	// const sevenHoursRaw = data.hourly_forecast.splice(0, 7);
+
+
+	// const sevenHours = sevenHoursRaw.reduce((sevenHours, hour) => {
+	// let hourObj = {time: hour.FCTTIME.hour,
+	// 							temp: hour.temp.english
+	// }
+	// sevenHours.push(hourObj)
+	// return sevenHours
+	// }, [])
+
+	// console.log(sevenHours);
+
+
 	return currentWeather
 }
 
