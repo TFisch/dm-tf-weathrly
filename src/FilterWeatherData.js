@@ -22,7 +22,7 @@ function filterWeather (data) {
 	console.log(sevenHours);
 
 
-	return currentWeather
+	return {currentWeather, sevenHours}
 }
 
 export default filterWeather;
