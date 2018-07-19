@@ -4,30 +4,32 @@ import Welcome from './Welcome';
 import CurrentWeather from './CurrentWeather';
 import Key from './Key'
 import Search from './Search.js'
+import filterWeather from './FilterWeatherData'
 
 
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      searchedLocation: ''
+      searchedLocation: '',
+      CurrentWeather: []
+
     }
 
     this.getWeather = this.getWeather.bind(this)
     this.setLocation = this.setLocation.bind(this)
   }
   setLocation(search) {
-    console.log(search)
     this.setState({ searchedLocation: search }, this.getWeather);
-   
   }
 
   getWeather() {
     fetch(`http://api.wunderground.com/api/${Key}/geolookup/conditions/hourly/forecast10day/q/${this.state.searchedLocation}.json`)
-    .then(response => response.json()).then(data => console.log(data))
+    .then(response => response.json())
+    .then(data => filterWeather(data))
+    // .then(filterResponse => this.setState({CurrentWeather: filterResponse}))
+
   }
-
-
 
   render() {
     return (
