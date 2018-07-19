@@ -11,12 +11,13 @@ export default class App extends Component {
     super();
     this.state = {
       searchedLocation: ''
-      // weatherData: data
     }
+
     this.getWeather = this.getWeather.bind(this)
     this.setLocation = this.setLocation.bind(this)
   }
   setLocation(search) {
+    console.log(search)
     this.setState({ searchedLocation: search }, this.getWeather);
    
   }
