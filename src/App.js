@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Welcome from './Welcome';
 import CurrentWeather from './CurrentWeather';
-import { data } from './Api.js'
+import Key from './Key'
 import Search from './Search.js'
 
-console.log(data)
 
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      searchedLocation: '',
-      weatherData: data
-
+      searchedLocation: ''
+      // weatherData: data
     }
-
+    this.getWeather = this.getWeather.bind(this)
     this.setLocation = this.setLocation.bind(this)
   }
-
   setLocation(search) {
-    this.setState({ searchedLocation: search.userLocationInput })
+    this.setState({ searchedLocation: search }, this.getWeather);
+   
   }
+
+  getWeather() {
+    fetch(`http://api.wunderground.com/api/${Key}/geolookup/conditions/hourly/forecast10day/q/${this.state.searchedLocation}.json`)
+    .then(response => response.json()).then(data => console.log(data))
+  }
+
 
 
   render() {

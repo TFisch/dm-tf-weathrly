@@ -12,10 +12,9 @@ export default class Search extends Component {
 	return(
 		<div>	
 			<input type="text" value={this.state.userLocationInput} onChange={(event) => {
-				console.log(this.props.data)
 				this.setState( { userLocationInput: event.target.value } )
 			}}/>
-			<button onClick= { (event) => { this.props.setLocation(this.state); }}>submit</button>
+			<button onClick= { (event) => { this.props.setLocation(this.state.value); }}>submit</button>
 
         {/* // <button onClick= { (event) => {this.props.filterQuestions(this.state); }}>Filter Questions</button> */}
 		</div>
