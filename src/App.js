@@ -12,7 +12,7 @@ export default class App extends Component {
     super();
     this.state = {
       searchedLocation: '',
-      CurrentWeather: []
+      currentCity: ''
 
     }
 
@@ -27,7 +27,7 @@ export default class App extends Component {
     fetch(`http://api.wunderground.com/api/${Key}/geolookup/conditions/hourly/forecast10day/q/${this.state.searchedLocation}.json`)
     .then(response => response.json())
     .then(data => filterWeather(data))
-    // .then(filterResponse => this.setState({CurrentWeather: filterResponse}))
+    .then(filterResponse => this.setState({currentCity: filterResponse.currCity}))
 
   }
 
@@ -36,7 +36,7 @@ export default class App extends Component {
       <div className="App">
         <Welcome />
         <Search searchedLocation={this.state.searchedLocation} setLocation={this.setLocation} />
-        <CurrentWeather />
+        <CurrentWeather currCity={this.state.currentCity} />
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Weathrly</h1>
