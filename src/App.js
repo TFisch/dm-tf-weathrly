@@ -20,6 +20,7 @@ export default class App extends Component {
       low: 0,
       summary:'',
       sevenHourCast: []
+      // tenDayCast: []
 
     }
 
