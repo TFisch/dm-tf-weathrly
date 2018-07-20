@@ -5,7 +5,8 @@ import './SevenHourDisplay.css'
 
 export default function SevenHourDisplay (props) {
   return(
-		<ul className="sevenHourCard">
+		
+    <ul className="sevenHourCard">
       {
         props.sevenHourCast.map((hour, index) => {
           console.log(hour)
@@ -15,6 +16,7 @@ export default function SevenHourDisplay (props) {
       }
 
     </ul>
+
 	)
 
 }
