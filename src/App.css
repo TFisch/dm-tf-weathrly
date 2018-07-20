@@ -1,7 +1,9 @@
 body {
   font-family: 'Cuprum', sans-serif;
-
+  /* background-image: url('./images/water.jpg');
+  background-size: cover; */
 }
+
 
 .App {
   text-align: center;

@@ -23,9 +23,9 @@ class CurrentWeather extends Component {
 	render() {
 		return(
 			<div className="weather-card">	
+				<h1 class="current-temp">Current Temp {this.props.currentTemp}</h1>
 				<h1>State {this.props.currentCity}</h1>
 				<h1>Day {this.props.currentDay}</h1>
-				<h1>Current Temp {this.props.currentTemp}</h1>
 				<h1>Current High{this.props.high}</h1>
 				<h1>Current Low{this.props.low}</h1>
 				<h1>Summary {this.props.summary}</h1>
