@@ -10,7 +10,6 @@ function filterWeather (data) {
 
 	const sevenHoursRaw = data.hourly_forecast.splice(0, 7);
 
-
 	const sevenHours = sevenHoursRaw.reduce((sevenHours, hour) => {
 	let hourObj = {time: hour.FCTTIME.hour,
 								temp: hour.temp.english
@@ -19,10 +18,19 @@ function filterWeather (data) {
 	return sevenHours
 	}, [])
 
-	console.log(sevenHours);
+	const tenDayArray = data.forecast.simpleforecast.forecastday.splice(0, 10)
 
+	const tenDaysRaw = tenDayArray.reduce((tenDay, day) => {
+		let dayObj = {
+			day: day.date.weekday,
+			high: day.high.fahrenheit,
+			low: day.low.fahrenheit
+		}
+		tenDay.push(dayObj)
+		return tenDay
+	}, [])
 
-	return {currentWeather, sevenHours}
+	return {currentWeather, sevenHours, tenDaysRaw}
 }
 
 export default filterWeather;
