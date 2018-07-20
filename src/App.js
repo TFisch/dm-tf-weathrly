@@ -6,7 +6,7 @@ import Key from './Key'
 import Search from './Search.js'
 import filterWeather from './FilterWeatherData'
 import SevenHourDisplay from './SevenHourDisplay'
-
+import TenDayDisplay from './TenDayDisplay.js'
 
 export default class App extends Component {
   constructor() {
@@ -19,9 +19,8 @@ export default class App extends Component {
       high: 0,
       low: 0,
       summary:'',
-      sevenHourCast: []
-      // tenDayCast: []
-
+      sevenHourCast: [],
+      tenDayCast: []
     }
 
     this.getWeather = this.getWeather.bind(this)
@@ -42,10 +41,9 @@ export default class App extends Component {
       high: weatherObj.currentWeather.high,
       low: weatherObj.currentWeather.low,
       summary: weatherObj.currentWeather.summary,
-      sevenHourCast: weatherObj.sevenHours
-
+      sevenHourCast: weatherObj.sevenHours,
+      tenDayCast: weatherObj.tenDaysRaw
     }))
-
   }
 
   render() {
@@ -62,7 +60,7 @@ export default class App extends Component {
         summary={this.state.summary}
         />
         <SevenHourDisplay sevenHourCast={this.state.sevenHourCast} />
-       
+        <TenDayDisplay tenDayCast={this.state.tenDayCast} />
       </div>
     );
   }

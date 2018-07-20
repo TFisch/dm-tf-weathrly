@@ -9,7 +9,7 @@ export default class SevenHours extends Component {
 
   }
 
-  render(){
+  render() {
     return (
       <li class="seven-day-display">
         <h1 class="hour-text">"Hour"{this.props.hour.time}</h1>
