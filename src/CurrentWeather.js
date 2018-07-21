@@ -24,11 +24,14 @@ class CurrentWeather extends Component {
 		return(
 			<div className="weather-card">	
 				<h1 class="current-temp">{this.props.currentTemp}</h1>
-				<h3 class="current-city">City {this.props.currentCity}</h3>
-				<h2 class="current-day">Day {this.props.currentDay}</h2>
-				<h2 class="current-high">Current High{this.props.high}</h2>
-				<h2 class="current-low">Current Low{this.props.low}</h2>
-				<h2 class="current-summary">Summary {this.props.summary}</h2>
+				<h3 class="current-city">{this.props.currentCity}</h3>
+				<h2 class="current-day">{this.props.currentDay}</h2>
+				<span class="high-low">
+					<h2 class="current-high temp-span-left">{this.props.high}</h2>
+					<p class="divide">/</p>
+					<h2 class="current-low temp-span-right">{this.props.low}</h2>
+				</span>
+				<h2 class="current-summary">{this.props.summary}</h2>
 			</div>
 		)
 	}
