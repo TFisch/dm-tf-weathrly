@@ -9,17 +9,17 @@ export default class TenDay extends Component {
 
 	render() {
 		return (
-			<li class="ten-day-wrapper">
-				<div class="wrap-horiz">	
-					<div class="day-wrap">
-						<h1>{this.props.day.day}</h1>
-						<span class="high-low">
+			<li className="ten-day-wrapper">
+				<div className="wrap-horiz">	
+					<div className="day-wrap">
+						<h1 className="day-header">{this.props.day.day}</h1>
+						<span className="high-low">
 							<h1>{this.props.day.high}</h1>
-							<p class="divide">/</p>
+							<p className="divide">/</p>
 							<h1>{this.props.day.low}</h1>
 						</span>
 					</div>
-					<img class="weather-icon" src={ require('./images/sun-icon.svg') } />
+					<img className="weather-icon" src={ require('./images/sun-icon.svg') } />
 				</div>		
 			</li>
 		)

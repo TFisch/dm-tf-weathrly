@@ -10,13 +10,23 @@
   flex-direction: column;
 }
 
-.wrap-horiz{
+.day-header {
+  margin: auto 0;
+  font-size: 2.5em;
+}
+
+.wrap-horiz {
   align-items: center;
   display: flex;
-
+  flex-direction: column;
   margin-left: auto 2em;
 }
 
-.weather-icon{  
+.weather-icon {  
   width: 6em;
+}
+
+.high-low {
+  display: flex;
+  align-items: center;
 }

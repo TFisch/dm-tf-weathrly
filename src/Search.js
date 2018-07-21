@@ -18,7 +18,11 @@ export default class Search extends Component {
 				}}/>
 				<button className="submit" onClick= { (event) => { this.props.setLocation(this.state.userLocationInput); }}>submit</button>
 			</div>
-		)
+		) 
+	}
+
+	toggleHidden(e) {
+		this.state.isHidden = false;
 	}
 
 }

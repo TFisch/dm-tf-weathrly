@@ -20,7 +20,8 @@ export default class App extends Component {
       low: 0,
       summary:'',
       sevenHourCast: [],
-      tenDayCast: []
+      tenDayCast: [],
+      isHidden: true
     }
 
     this.getWeather = this.getWeather.bind(this)

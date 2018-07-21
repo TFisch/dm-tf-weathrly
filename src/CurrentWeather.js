@@ -21,7 +21,7 @@ class CurrentWeather extends Component {
 	// }
 
 	render() {
-		if()
+	
 			return(
 				<div className="weather-card">	
 					<h1 className="current-temp">{this.props.currentTemp}</h1>
