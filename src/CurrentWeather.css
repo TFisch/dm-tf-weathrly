@@ -1,17 +1,22 @@
 .weather-card {
 	background-color: #8CB4EB;
-  border: 2px solid green;
+  border: 1.5px solid #1F363D;
   margin-left: 2em;
   margin-top: 1em;
+  padding-left: .8em;
   text-align: left;
   width: 80%;
 }
 
 .current-temp {
   font-weight: bold;
+  color: #FFE17D;
+  text-shadow: 2px 2px #1F363D;
 }
 
 
-.current-day, .current-high, .current-low, .current-summary {
+.current-day, .current-city, .current-high, .current-low, .current-summary {
   font-weight: 400;
+  color: #FFE17D;
+  text-shadow: 2px 2px #1F363D;
 }
