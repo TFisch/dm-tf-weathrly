@@ -1,11 +1,12 @@
 body {
+  background-color: #E9F1F7;
   font-family: 'Cuprum', sans-serif;
 }
 
 
 .banner {
-  background-color: #ABFEDB;
-  border-bottom: solid 3px #1F363D;
+  background-color: #8CB4EB;
+  border-bottom: solid 2px #1F363D;
   display: flex;
   justify-content: space-between;
   height: 4em;
