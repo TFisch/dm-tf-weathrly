@@ -1,6 +1,15 @@
 .weather-card {
 	background-color: blue;
   border: 2px solid green;
+  text-align: left;
   width: 80%;
 }
 
+.current-temp {
+  font-weight: bold;
+}
+
+
+.current-day, .current-high, .current-low, .current-summary {
+  font-weight: 400;
+}

@@ -27,7 +27,7 @@ class CurrentWeather extends Component {
 				<h3 class="current-city">City {this.props.currentCity}</h3>
 				<h2 class="current-day">Day {this.props.currentDay}</h2>
 				<h2 class="current-high">Current High{this.props.high}</h2>
-				<h2 class="current-Low">Current Low{this.props.low}</h2>
+				<h2 class="current-low">Current Low{this.props.low}</h2>
 				<h2 class="current-summary">Summary {this.props.summary}</h2>
 			</div>
 		)
