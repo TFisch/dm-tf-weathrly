@@ -5,7 +5,7 @@ import './welcome.css'
 const Welcome = () => {
 	return (
 		<div>
-			<h1>Weathrly</h1>
+			<h1 class="app-title">Weathrly</h1>
 		</div>
 	)
 }
