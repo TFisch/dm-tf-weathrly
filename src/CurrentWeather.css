@@ -1,7 +1,7 @@
 .weather-card {
 	background-color: #6D7E91;
   border: 2px solid #1F363D;
-  margin-left: 2em;
+  margin-left: .75em;
   margin-top: 1em;
   padding-left: .8em;
   text-align: left;
@@ -9,14 +9,18 @@
 }
 
 .current-temp {
+  font-size: 9em;
   font-weight: bold;
   color: #FFE17D;
-  text-shadow: 2px 2px #1F363D;
+  margin: auto;
+  text-shadow: 5px 6px #1F363D;
 }
 
 
 .current-day, .current-city, .current-high, .current-low, .current-summary {
+  font-size: 2em;
   font-weight: 400;
+  margin: .50em;
   color: #FFE17D;
   text-shadow: 2px 2px #1F363D;
 }
