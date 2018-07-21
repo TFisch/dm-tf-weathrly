@@ -1,0 +1,22 @@
+.ten-day-wrapper {
+  display: flex;
+  margin: auto 0;
+  width: 13em;
+  font-size: 1em;
+}
+
+.day-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap-horiz{
+  align-items: center;
+  display: flex;
+
+  margin-left: auto 2em;
+}
+
+.weather-icon{  
+  width: 6em;
+}
