@@ -1,7 +1,7 @@
 .weather-card {
-	background-color: #8CB4EB;
-  border: 1.5px solid #1F363D;
-  margin-left: 2em;
+	background-color: #6D7E91;
+  border: 2px solid #1F363D;
+  margin-left: 1.2em;
   margin-top: 1em;
   padding-left: .8em;
   text-align: left;
@@ -9,14 +9,42 @@
 }
 
 .current-temp {
+  font-size: 9em;
   font-weight: bold;
+  color: #FFE17D;
+  margin: auto;
+  text-shadow: 5px 6px #1F363D;
+}
+
+
+.current-day, 
+.current-city, 
+.current-high, 
+.current-low, 
+.current-summary {
+  font-size: 2.3em;
+  font-weight: 400;
+  margin: .50em;
   color: #FFE17D;
   text-shadow: 2px 2px #1F363D;
 }
 
+.temp-span-right {
+  margin-left: .1em;
+}
 
-.current-day, .current-city, .current-high, .current-low, .current-summary {
+.temp-span-left {
+  margin-right: .1em;
+}
+
+.high-low {
+  display: flex;
+}
+
+.divide {
+  font-size: 2em;
   font-weight: 400;
+  margin: .50em;
   color: #FFE17D;
   text-shadow: 2px 2px #1F363D;
 }

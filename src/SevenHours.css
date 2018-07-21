@@ -1,14 +1,29 @@
-.seven-day-display {
-  border: solid 1px black;
-
+ul {
+  list-style-type: none;
 }
 
-.proj-temp-text {
-  font-size: 1.5em;
- 
+.seven-day-display {
+  background-color: #6D7E91;
+  color: #FFE17D;
+  height: 4.44em;
+  padding: 0;
+
+  text-shadow: 2px 2px #1F363D;
+  width: 13em;
 }
 
 .hour-text {
+  color: #FFE17D;
+  text-align: left;
+  text-shadow: 2px 2px #1F363D;
+  font-size: 1.7em;
+  margin: auto 0;
+  margin-left: 1em;
+  padding: 0;
+}
+
+.proj-temp-text {
   font-size: 1em;
+  margin: auto 0;
 
 }
