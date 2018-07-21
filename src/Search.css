@@ -1,12 +1,29 @@
 .location-input{
-  height: 2.4em;
+  height: 2.9em;
   width: 20em;
 }
 
+.search-wrap {
+  
+  display: flex;
+  justify-content: center;
+  margin-right: 1em;
+  margin-top: .5em;
+}
+
 .submit{
-  height: 3em;
+  background-color: #1F363D;
+  border-radius: 12px;
+  color: #ABFEDB;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 1em;
+  height: 2.3em;
+  margin-left: .75em;
+  text-align: center;
+  width: 7.5em;
 }
 
 textarea:focus, input:focus{
   outline: none;
 }
+

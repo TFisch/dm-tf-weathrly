@@ -12,7 +12,7 @@ export default class Search extends Component {
 
 	render() {
 		return(
-			<div>	
+			<div class="search-wrap">	
 				<input class="location-input" type="text" value={this.state.userLocationInput} onChange={(event) => {
 					this.setState( { userLocationInput: event.target.value } )
 				}}/>
