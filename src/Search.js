@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './Search.css'
+
 
 export default class Search extends Component {
 	constructor(props) {
@@ -11,10 +13,10 @@ export default class Search extends Component {
 	render() {
 		return(
 			<div>	
-				<input type="text" value={this.state.userLocationInput} onChange={(event) => {
+				<input class="location-input" type="text" value={this.state.userLocationInput} onChange={(event) => {
 					this.setState( { userLocationInput: event.target.value } )
 				}}/>
-				<button onClick= { (event) => { this.props.setLocation(this.state.userLocationInput); }}>submit</button>
+				<button class="submit" onClick= { (event) => { this.props.setLocation(this.state.userLocationInput); }}>submit</button>
 			</div>
 		)
 	}
