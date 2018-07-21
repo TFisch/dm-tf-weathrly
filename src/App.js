@@ -49,8 +49,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+       <div class="banner"> 
         <Welcome />
         <Search searchedLocation={this.state.searchedLocation} setLocation={this.setLocation} />
+       </div> 
         <div class="main-wrapper">
           <CurrentWeather 
           currentCity={this.state.currentCity} 

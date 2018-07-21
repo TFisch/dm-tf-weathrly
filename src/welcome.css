@@ -5,13 +5,7 @@
   margin: auto 0;
 }
 
-.banner {
-  background-color: #ABFEDB;
-  border-bottom: solid 3px black;
-  display: flex;
-  height: 2.81em;
 
-}
 
 .weather-icon {
   width: 4em;

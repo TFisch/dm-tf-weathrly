@@ -1,7 +1,5 @@
 body {
   font-family: 'Cuprum', sans-serif;
-  /* background-image: url('./images/water.jpg');
-  background-size: cover; */
 }
 
 
@@ -28,6 +26,15 @@ body {
 .App-intro {
   font-size: large;
 }
+
+.banner {
+  background-color: #ABFEDB;
+  border-bottom: solid 3px black;
+  display: flex;
+  justify-content: space-between;
+  height: 2.81em;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
