@@ -1,12 +1,20 @@
+input[type=text] {
+  background-color: #E9F1F7;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+
 .location-input{
-  height: 2.9em;
+  height: 2em;
   width: 20em;
 }
 
 .search-wrap {
-  
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-right: 1em;
   margin-top: .5em;
 }
@@ -14,7 +22,7 @@
 .submit{
   background-color: #1F363D;
   border-radius: 12px;
-  color: #ABFEDB;
+  color: #E9F1F7;
   font-family: 'Cuprum', sans-serif;
   font-size: 1em;
   height: 2.3em;
