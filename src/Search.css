@@ -1,0 +1,12 @@
+.location-input{
+  height: 2.4em;
+  width: 20em;
+}
+
+.submit{
+  height: 3em;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
