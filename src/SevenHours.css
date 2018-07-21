@@ -1,3 +1,12 @@
 .seven-day-display {
   border: solid 1px black;
+
+}
+
+.proj-temp-text {
+  font-size: 1.5em;
+}
+
+.hour-text {
+  font-size: 1em;
 }

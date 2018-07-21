@@ -1,6 +1,7 @@
 .sevenHourCard {
 	display: flex;
-	height: 50%;
+	flex-direction: column;
+	margin: auto 0;
 	width: 50%;
 }
 

@@ -51,15 +51,17 @@ export default class App extends Component {
       <div className="App">
         <Welcome />
         <Search searchedLocation={this.state.searchedLocation} setLocation={this.setLocation} />
-        <CurrentWeather 
-        currentCity={this.state.currentCity} 
-        currentDay={this.state.currentDay} 
-        currentTemp={this.state.currentTemp} 
-        high={this.state.high}
-        low={this.state.low}
-        summary={this.state.summary}
-        />
-        <SevenHourDisplay sevenHourCast={this.state.sevenHourCast} />
+        <div class="main-wrapper">
+          <CurrentWeather 
+          currentCity={this.state.currentCity} 
+          currentDay={this.state.currentDay} 
+          currentTemp={this.state.currentTemp} 
+          high={this.state.high}
+          low={this.state.low}
+          summary={this.state.summary}
+          />
+          <SevenHourDisplay sevenHourCast={this.state.sevenHourCast} />
+        </div>
         <TenDayDisplay tenDayCast={this.state.tenDayCast} />
       </div>
     );
