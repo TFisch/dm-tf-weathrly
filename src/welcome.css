@@ -1,6 +1,16 @@
 .app-title {
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: 400;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.banner {
+  background-color: #ABFEDB;
+  border-bottom: solid 3px black;
+  display: flex;
+  height: 2.81em;
+
 }
 
 .weather-icon {
