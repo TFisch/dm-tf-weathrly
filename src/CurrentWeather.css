@@ -1,6 +1,7 @@
 .weather-card {
 	background-color: blue;
   border: 2px solid green;
+  margin-left: 2em;
   text-align: left;
   width: 80%;
 }
