@@ -21,8 +21,5 @@ export default class Search extends Component {
 		) 
 	}
 
-	toggleHidden(e) {
-		this.state.isHidden = false;
-	}
 
 }
