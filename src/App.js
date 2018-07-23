@@ -22,7 +22,7 @@ export default class App extends Component {
       sevenHourCast: [],
       tenDayCast: [],
       isHidden: true,
-      image: null
+      image: ""
     }
 
     this.getWeather = this.getWeather.bind(this)
@@ -58,7 +58,7 @@ export default class App extends Component {
       summary: weatherObj.currentWeather.summary,
       sevenHourCast: weatherObj.sevenHours,
       tenDayCast: weatherObj.tenDaysRaw,
-      image: weatherObj.image
+      image: weatherObj.currentWeather.image
 
     }))
   }
