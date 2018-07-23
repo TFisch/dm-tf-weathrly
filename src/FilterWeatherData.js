@@ -12,7 +12,7 @@ function filterWeather (data) {
 
 	const sevenHours = sevenHoursRaw.reduce((sevenHours, hour) => {
 
-		let hourObj = {time: hour.FCTTIME.hour,
+		let hourObj = {time: hour.FCTTIME.civil,
 								temp: hour.temp.english
 	}
 	sevenHours.push(hourObj)
