@@ -25,7 +25,7 @@ class CurrentWeather extends Component {
 	
 			return(
 				<div className="weather-card">	
-					<img className="current-weather-icon" src={"this.props.image"} />
+					<img className="current-weather-icon" src={this.props.image} />
 					<h1 className="current-temp">{this.props.currentTemp}</h1>
 					<h3 className="current-city">{this.props.currentCity}</h3>
 					<h2 className="current-day">{this.props.currentDay}</h2>
