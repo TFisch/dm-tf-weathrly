@@ -29,6 +29,7 @@ export default class App extends Component {
   }
   setLocation(search) {
     this.setState({ searchedLocation: search }, this.getWeather);
+    this.state.isHidden = false;
   }
 
   getWeather() {
@@ -48,13 +49,24 @@ export default class App extends Component {
   }
 
   render() {
+    if(this.state.isHidden === true){
     return (
       <div className="App">
        <div className="banner"> 
         <Welcome />
         <Search searchedLocation={this.state.searchedLocation} setLocation={this.setLocation} />
+       </div>
        </div> 
-        <div className="main-wrapper">
+        );
+        } else {
+        return (
+          <div className="App">
+          <div className="banner"> 
+           <Welcome />
+           <Search searchedLocation={this.state.searchedLocation} setLocation={this.setLocation} />
+          </div>
+       <div className="main-wrapper">
+          <div className="upper-container">
           <CurrentWeather 
           currentCity={this.state.currentCity} 
           currentDay={this.state.currentDay} 
@@ -64,10 +76,12 @@ export default class App extends Component {
           summary={this.state.summary}
           />
           <SevenHourDisplay sevenHourCast={this.state.sevenHourCast} />
-        </div>
+          </div>
         <TenDayDisplay tenDayCast={this.state.tenDayCast} />
+      </div>
       </div>
     );
   }
+}
 }
 
