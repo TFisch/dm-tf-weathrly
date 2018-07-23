@@ -30,6 +30,17 @@ export default class App extends Component {
   setLocation(search) {
     this.setState({ searchedLocation: search }, this.getWeather);
     this.state.isHidden = false;
+    localStorage.setItem('savedLocation', search);
+  }
+
+  componentDidMount() {
+    if(Object.keys(localStorage).length > 0){
+      let savedCity = localStorage.getItem('savedLocation');
+      this.setLocation(savedCity);
+    } else {
+      return
+    }
+
   }
 
   getWeather() {
