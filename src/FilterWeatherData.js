@@ -15,7 +15,8 @@ function filterWeather (data) {
 	const sevenHours = sevenHoursRaw.reduce((sevenHours, hour) => {
 
 		let hourObj = {time: hour.FCTTIME.civil,
-								temp: hour.temp.english
+								temp: hour.temp.english,
+								icon: hour.icon_url
 	}
 	sevenHours.push(hourObj)
 	return sevenHours
@@ -28,6 +29,7 @@ function filterWeather (data) {
 			day: day.date.weekday,
 			high: day.high.fahrenheit,
 			low: day.low.fahrenheit
+			// icon: 
 		}
 		tenDay.push(dayObj)
 		return tenDay

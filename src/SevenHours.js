@@ -16,7 +16,7 @@ export default class SevenHours extends Component {
           <h3 class="hour-text">{this.props.hour.time}</h3>
           <h1 class="proj-temp-text">{this.props.hour.temp}</h1>
         </li>
-        <img className="weather-icon-seven" src={ require('./images/sun-icon.svg') } />
+          <img className="weather-icon-seven" src={this.props.hour.icon}/>
     </div>
     )
   }
