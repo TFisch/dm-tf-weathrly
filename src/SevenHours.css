@@ -17,7 +17,6 @@ ul {
   text-shadow: 2px 2px #1F363D;
   font-size: 1.7em;
   margin: auto 0;
-  margin-left: 1em;
   padding: 0;
 }
 
@@ -25,4 +24,16 @@ ul {
   font-size: 1em;
   margin: auto 0;
 
+}
+
+.seven-day-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto 0;
+
+  width: 8em;
+}
+
+.weather-icon-seven {
+  width: 3.2em;
 }

@@ -29,7 +29,7 @@ class CurrentWeather extends Component {
 					<h2 className="current-day">{this.props.currentDay}</h2>
 					<span className="high-low">
 						<h2 className="current-high temp-span-left">{this.props.high}</h2>
-						<p className="divide">/</p>
+						<p className="divide"></p>
 						<h2 className="current-low temp-span-right">{this.props.low}</h2>
 					</span>
 					<h2 className="current-summary">{this.props.summary}</h2>
