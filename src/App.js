@@ -21,7 +21,8 @@ export default class App extends Component {
       summary:'',
       sevenHourCast: [],
       tenDayCast: [],
-      isHidden: true
+      isHidden: true,
+      image: null
     }
 
     this.getWeather = this.getWeather.bind(this)
@@ -31,6 +32,7 @@ export default class App extends Component {
     this.setState({ searchedLocation: search }, this.getWeather);
     this.state.isHidden = false;
     localStorage.setItem('savedLocation', search);
+    console.log(this.state.image);
   }
 
   componentDidMount() {
@@ -55,7 +57,9 @@ export default class App extends Component {
       low: weatherObj.currentWeather.low,
       summary: weatherObj.currentWeather.summary,
       sevenHourCast: weatherObj.sevenHours,
-      tenDayCast: weatherObj.tenDaysRaw
+      tenDayCast: weatherObj.tenDaysRaw,
+      image: weatherObj.image
+
     }))
   }
 
@@ -85,6 +89,7 @@ export default class App extends Component {
           high={this.state.high}
           low={this.state.low}
           summary={this.state.summary}
+          image={this.state.image}
           />
           <SevenHourDisplay sevenHourCast={this.state.sevenHourCast} />
           </div>

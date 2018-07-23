@@ -5,7 +5,9 @@ function filterWeather (data) {
 		 currTemp: Math.floor(data.current_observation.temp_f),
 		 high: data.forecast.simpleforecast.forecastday[0].high.fahrenheit,
 		 low: data.forecast.simpleforecast.forecastday[0].low.fahrenheit,
-		 summary: data.forecast.txt_forecast.forecastday[0].fcttext
+		 summary: data.forecast.txt_forecast.forecastday[0].fcttext,
+		 image: data.current_observation.image.url
+
 	}
 
 	const sevenHoursRaw = data.hourly_forecast.splice(0, 7);

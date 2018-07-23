@@ -48,3 +48,8 @@
   color: #FFE17D;
   text-shadow: 2px 2px #1F363D;
 }
+
+.current-weather-icon {
+  height: 50px;
+  width: 50px;
+}

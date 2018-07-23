@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './CurrentWeather.css'
+import { throws } from 'assert';
 
 
 
@@ -24,6 +25,7 @@ class CurrentWeather extends Component {
 	
 			return(
 				<div className="weather-card">	
+					<img className="current-weather-icon" src={"this.props.image"} />
 					<h1 className="current-temp">{this.props.currentTemp}</h1>
 					<h3 className="current-city">{this.props.currentCity}</h3>
 					<h2 className="current-day">{this.props.currentDay}</h2>
@@ -33,7 +35,9 @@ class CurrentWeather extends Component {
 						<h2 className="current-low temp-span-right">{this.props.low}</h2>
 					</span>
 					<h2 className="current-summary">{this.props.summary}</h2>
+					
 				</div>
+
 			)
 		}
 
