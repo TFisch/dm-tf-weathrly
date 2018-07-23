@@ -28,8 +28,8 @@ function filterWeather (data) {
 		let dayObj = {
 			day: day.date.weekday,
 			high: day.high.fahrenheit,
-			low: day.low.fahrenheit
-			// icon: 
+			low: day.low.fahrenheit,
+			icon: day.icon_url
 		}
 		tenDay.push(dayObj)
 		return tenDay

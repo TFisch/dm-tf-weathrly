@@ -19,7 +19,7 @@ export default class TenDay extends Component {
 							<h1>{this.props.day.low}</h1>
 						</span>
 					</div>
-					<img className="weather-icon" src={ require('./images/sun-icon.svg') } />
+					<img className="weather-icon" src={this.props.day.icon} />
 				</div>		
 			</li>
 		)
