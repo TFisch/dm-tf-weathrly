@@ -1,6 +1,7 @@
 .weather-card {
 	background-color: #6D7E91;
   border: 2px solid #1F363D;
+  display: flex;
   margin-left: 10em;
   margin-top: 1em;
   padding-left: .8em;
@@ -52,4 +53,10 @@
 .current-weather-icon {
   height: 50px;
   width: 50px;
+}
+
+.current-weather-icon {
+  height: 18em;
+  margin-right: 5em;
+  width: 18em;
 }
