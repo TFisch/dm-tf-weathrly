@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css'
+import cities from './cities.js'
 const PrefixTrie = require('@timfischer/complete-me')
 
 
@@ -7,11 +8,12 @@ export default class Search extends Component {
 	constructor(props) {
 		super();
 		this.state = {
-			userLocationInput: props.searchedLocation
+			userLocationInput: props.searchedLocation,
+			trie: new PrefixTrie()
 	}
 
-	let cities = new PrefixTrie();
-	cities.populate();
+
+	this.state.trie.populate(cities);
 
 }
 
