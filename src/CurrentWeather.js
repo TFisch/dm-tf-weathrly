@@ -36,7 +36,7 @@ class CurrentWeather extends Component {
 						</span>
 						<h2 className="current-summary">{this.props.summary}</h2>
 					</div>
-					<div class="wrap-right">
+					<div className="wrap-right">
 						<img className="current-weather-icon" src={this.props.image} />
 					</div>	
 				</div>
