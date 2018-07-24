@@ -2,7 +2,7 @@
 	background-color: #6D7E91;
   border: 2px solid #1F363D;
   display: flex;
-  margin-left: 10em;
+  margin-left: 8.5em;
   margin-top: 1em;
   padding-left: .8em;
   text-align: left;
@@ -28,6 +28,10 @@
   margin: .50em;
   color: #FFE17D;
   text-shadow: 2px 2px #1F363D;
+}
+
+.current-summary {
+  width: 170%;
 }
 
 .temp-span-right {
