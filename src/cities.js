@@ -1,5 +1,5 @@
 
-const cities = {
+ export default {
   "data": [
     "New York, NY",
     "Los Angeles, CA",
@@ -1004,6 +1004,3 @@ const cities = {
   ]
 }
 
-export {
-  cities
-}

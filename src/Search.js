@@ -9,11 +9,11 @@ export default class Search extends Component {
 		super();
 		this.state = {
 			userLocationInput: props.searchedLocation,
-			trie: new PrefixTrie()
+			// trie: new PrefixTrie()
 	}
 
 
-	this.state.trie.populate(cities);
+	// this.state.trie.populate(cities);
 
 }
 
