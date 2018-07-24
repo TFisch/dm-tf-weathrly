@@ -5,6 +5,7 @@ ul {
 .seven-day-display {
   background-color: #6D7E91;
   color: #FFE17D;
+  display: flex;
   height: 4.44em;
   padding: 0;
   text-shadow: 2px 2px #1F363D;
@@ -21,8 +22,8 @@ ul {
 }
 
 .proj-temp-text {
-  font-size: 1em;
-  margin: auto 0;
+  font-size: 2em;
+  margin: auto;
 
 }
 
@@ -31,7 +32,7 @@ ul {
   justify-content: space-evenly;
   margin: auto 0;
 
-  width: 8em;
+  width: 15.5em;
 }
 
 .weather-icon-seven {
