@@ -12,9 +12,9 @@ export default class SevenHours extends Component {
   render() {
     return (
      <div className="seven-day-wrapper">
-        <li class="seven-day-display">
-          <h3 class="hour-text">{this.props.hour.time}</h3>
-          <h1 class="proj-temp-text">{this.props.hour.temp}</h1>
+        <li className="seven-day-display">
+          <h3 className="hour-text">{this.props.hour.time}</h3>
+          <h1 className="proj-temp-text">{this.props.hour.temp}</h1>
         </li>
           <img className="weather-icon-seven" src={this.props.hour.icon}/>
     </div>
