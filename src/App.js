@@ -32,7 +32,6 @@ export default class App extends Component {
     this.setState({ searchedLocation: search }, this.getWeather);
     this.state.isHidden = false;
     localStorage.setItem('savedLocation', search);
-    console.log(this.state.image);
   }
 
   componentDidMount() {
@@ -59,11 +58,8 @@ export default class App extends Component {
       sevenHourCast: weatherObj.sevenHours,
       tenDayCast: weatherObj.tenDaysRaw,
       image: weatherObj.currentWeather.image
+
     }))
-    .catch(err => alert('Hey this location does not exsist enter a new location',
-     this.setState({ searchedLocation: ''}),
-     localStorage.clear(),
-     window.location.reload()))
   }
 
   render() {
