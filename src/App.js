@@ -29,10 +29,9 @@ export default class App extends Component {
     this.setLocation = this.setLocation.bind(this)
   }
   setLocation(search) {
-    this.setState({ searchedLocation: search }, this.getWeather);
-    this.state.isHidden = false;
+    this.setState({ searchedLocation: search, isHidden: false }, this.getWeather);
     localStorage.setItem('savedLocation', search);
-    console.log(this.state.image);
+    // console.log(this.state.image);
   }
 
   componentDidMount() {

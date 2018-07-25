@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import './Search.css'
-<<<<<<< Updated upstream
 import cities from './cities.js'
 import { PrefixTrie } from '@timfischer/complete-me';
-=======
-// import cities from './cities.js'
-// const PrefixTrie = require('@timfischer/complete-me')
 
->>>>>>> Stashed changes
 
 export default class Search extends Component {
 	constructor(props) {
@@ -15,18 +10,15 @@ export default class Search extends Component {
 		this.state = {
 			userLocationInput: props.searchedLocation,
 			prefixTrie: null,
-			suggestions: []
-	}
-
-
+		}
+		this.suggestions = []
 }
 
-
-	handleChange = e => {
-		this.setState( { userLocationInput: e.target.value });
-		this.displaySuggestions();
+	handleChange(e) {
+		this.setState( { userLocationInput: e.target.value}, () => this.displaySuggestions())
+		// this.displaySuggestions();
+		console.log(this.state.userLocationInput) 
 	}
-
 
 	componentDidMount() {
 		const prefixTrie = new PrefixTrie();
@@ -37,24 +29,18 @@ export default class Search extends Component {
 	}
 
 	displaySuggestions(){
-		const suggestions = this.state.prefixTrie.suggest(this.state.userLocationInput);
-		console.log(suggestions);
-		this.setState({
-			suggestions
-		})
+		this.suggestions = this.state.prefixTrie.suggest(this.state.userLocationInput);
+		console.log(this.state.userLocationInput)
+		console.log(this.suggestions);
 	}
-
-
 
 	render() {
 		return(
 			<div className="search-wrap">	
-				<input className="location-input" type="text" value={this.state.userLocationInput} onChange={e => this.handleChange(e)}/>
+				<input className="location-input" type="text" value={this.state.userLocationInput} onChange={(e) => this.handleChange(e)} />
 				<button className="submit" onClick= {() =>	this.props.setLocation(this.state.userLocationInput)}>submit</button>
 			</div>
 		) 
 	}
-
-
 
 }
