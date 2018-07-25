@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import './Search.css'
-<<<<<<< Updated upstream
 import cities from './cities.js'
 import { PrefixTrie } from '@timfischer/complete-me';
-=======
-// import cities from './cities.js'
-// const PrefixTrie = require('@timfischer/complete-me')
 
->>>>>>> Stashed changes
 
 export default class Search extends Component {
 	constructor(props) {
@@ -17,7 +12,6 @@ export default class Search extends Component {
 			prefixTrie: null,
 			suggestions: []
 	}
-
 
 }
 

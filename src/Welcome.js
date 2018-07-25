@@ -8,6 +8,7 @@ const Welcome = () => {
 			<img className="weather-icon" src={ require('./images/sunset.svg') } />
 			<h1 className="app-title">Weathrly</h1>
 		</div>
+
 	)
 }
 
