@@ -31,14 +31,18 @@ export default class Search extends Component {
 
 	displaySuggestions(){
 		this.suggestions = this.state.prefixTrie.suggest(this.state.userLocationInput);
-		console.log(this.state.userLocationInput)
-		console.log(this.suggestions);
 	}
+
+
+
 
 	render() {
 		return(
 			<div className="search-wrap">	
 				<input className="location-input" type="text" value={this.state.userLocationInput} onChange={(e) => this.handleChange(e)} />
+				<div className="suggestList">
+				<ul className="suggest">{this.suggestions.map(suggestion => <li>{suggestion}</li>)}</ul>
+				</div>
 				<button className="submit" onClick= {() =>	this.props.setLocation(this.state.userLocationInput)}>submit</button>
 			</div>
 		) 
