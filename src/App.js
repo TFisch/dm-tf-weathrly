@@ -34,8 +34,8 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    if(Object.keys(localStorage).length > 0){
-      let savedCity = localStorage.getItem('savedLocation');
+    if (Object.keys(localStorage).length > 0) {
+      let savedCity = localStorage.getItem('savedLocation'); 
       this.setLocation(savedCity);
     } else {
       return
