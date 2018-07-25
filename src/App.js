@@ -59,6 +59,7 @@ export default class App extends Component {
       image: weatherObj.currentWeather.image
 
     }))
+    
   }
 
   render() {

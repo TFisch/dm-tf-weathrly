@@ -9,15 +9,16 @@ export default class Search extends Component {
 		super();
 		this.state = {
 			userLocationInput: props.searchedLocation,
-			prefixTrie: null
+			prefixTrie: null,
+			suggestions: []
 		}
-		this.suggestions = []
+		// this.suggestions = []
 
 }
 
 	handleChange(e) {
-		this.setState( { userLocationInput: e.target.value}, () => this.displaySuggestions())
-		// this.displaySuggestions();
+		this.setState({userLocationInput: e.target.value})
+		this.displaySuggestions(e.target.value)
 		console.log(this.state.userLocationInput) 
 	}
 
@@ -29,8 +30,10 @@ export default class Search extends Component {
 		})
 	}
 
-	displaySuggestions(){
-		this.suggestions = this.state.prefixTrie.suggest(this.state.userLocationInput);
+	displaySuggestions(userLetters){
+		// this.suggestions = this.state.userLocationInput
+		let suggestions = this.state.prefixTrie.suggest(userLetters)
+		this.setState({ suggestions: suggestions })
 	}
 
 
@@ -41,7 +44,7 @@ export default class Search extends Component {
 			<div className="search-wrap">	
 				<input className="location-input" type="text" value={this.state.userLocationInput} onChange={(e) => this.handleChange(e)} />
 				<div className="suggestList">
-				<ul className="suggest">{this.suggestions.map(suggestion => <li>{suggestion}</li>)}</ul>
+				<ul className="suggest">{this.state.suggestions.map(suggestion => <li>{suggestion}</li>)}</ul>
 				</div>
 				<button className="submit" onClick= {() =>	this.props.setLocation(this.state.userLocationInput)}>submit</button>
 			</div>
