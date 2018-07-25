@@ -1,13 +1,40 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import ReactDOM from 'react-dom';
+
 import App from './App';
 
 describe('App', () => {
-  
-  it('should exist', () => {
-    const wrapper = shallow(<App />)
-    expect(wrapper).toBeDefined()
+	let wrapper;
+
+	beforeEach(() => {
+    wrapper = shallow(<App />)
+		// localStorage.clear();
+	})
+
+	it('should exist', () => {
+	
+		expect(wrapper).toBeDefined();
   })
+
+  it('should have initial state', () => {
+
+    expect(wrapper.state()).toEqual({ 
+    searchedLocation: '',
+    currentCity: '',
+    currentDay: '',
+    currentTemp: null,
+    high: null,
+    low: null,
+    summary:'',
+    sevenHourCast: [],
+    tenDayCast: [],
+    isHidden: true,
+    image: "" })
+  })
+
+  it('should render child components', () => {
+    
+  })
+
 
 })
