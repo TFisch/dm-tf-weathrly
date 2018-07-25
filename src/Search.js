@@ -9,9 +9,10 @@ export default class Search extends Component {
 		super();
 		this.state = {
 			userLocationInput: props.searchedLocation,
-			prefixTrie: null,
+			prefixTrie: null
 		}
 		this.suggestions = []
+
 }
 
 	handleChange(e) {
