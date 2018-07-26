@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Welcome from './Welcome';
 import CurrentWeather from './CurrentWeather';
+import Greeting from './Greeting';
 import Key from './Key';
 import Search from './Search.js';
 import filterWeather from './FilterWeatherData';
@@ -74,6 +75,7 @@ export default class App extends Component {
 						<Welcome />
 						<Search searchedLocation={this.state.searchedLocation} setLocation={this.setLocation} />
 					</div>
+						<Greeting />
 				</div> 
 			);
 		} else {

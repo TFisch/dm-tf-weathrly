@@ -6,6 +6,9 @@ input[type=text] {
   margin: 0;
 }
 
+button:focus {
+  outline:0;
+}
 
 .location-input{
   height: 2em;
