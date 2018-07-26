@@ -34,7 +34,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    if (Object.keys(localStorage).length > 0) {
+    if (localStorage.savedLocation) {
       let savedCity = localStorage.getItem('savedLocation'); 
       this.setLocation(savedCity);
     } else {
@@ -57,9 +57,12 @@ export default class App extends Component {
       sevenHourCast: weatherObj.sevenHours,
       tenDayCast: weatherObj.tenDaysRaw,
       image: weatherObj.currentWeather.image
-
     }))
-    
+    // .catch( alert('hey this is not a valid loaction please enter another')),
+    // this.setState({ searchedLocation: ''})
+    // window.location.reload()
+  
+
   }
 
   render() {

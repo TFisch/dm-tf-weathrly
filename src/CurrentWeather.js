@@ -7,19 +7,8 @@ import { throws } from 'assert';
 class CurrentWeather extends Component {
   constructor(props) {
 		super();
-			// this.currentCity = '',
-			// this.currentCondition = '',
-			// this.currentDay = '',
-			// this.currentTemp = 0,
-			// this.currentHigh = 0,
-			// this.currentLow = 0,
-			// this.forcastSummary = ''
-		
-	}
 
-	// updateState = () => {
-	// 	this.setState({ currentCity: e.target.value })
-	// }
+	}
 
 	render() {
 	
@@ -43,8 +32,6 @@ class CurrentWeather extends Component {
 
 			)
 		}
-
-
 }
 
 
