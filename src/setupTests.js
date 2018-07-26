@@ -5,21 +5,25 @@ configure({ adapter: new Adapter() });
 
 
 class localStorage {
-    constructor() {
-    
-    }
 
-    getItem(key) {
-        return this.store[key];
-    }
-
-    setItem(key, string) {
-        this.store[key] = string;
-    }
-
-    clear() {
+        constructor() {
+            this.store = {}
+          }
         
-    }
-}
-
+          clear() {
+            this.store = {};
+          }
+        
+          getItem(key) {
+            return this.store[key] || null
+          }
+        
+          setItem(key, value) {
+            this.store[key] = value
+          }
+        
+          removeItem(key) {
+            delete this.store[key]
+          }
+        }
 global.localStorage = new localStorage;
