@@ -1,0 +1,23 @@
+.greeting-wrapper {
+  background-color: #6D7E91;
+  height: 20em; 
+  margin: auto;
+  text-align: center;
+  width: 70%;
+}
+
+.welcome-text {
+  color: #FFE17D;
+  font-size: 4em;
+  font-weight: 400;
+  margin-top: 3em;
+  padding-top: .3em;
+  text-shadow: 3px 3px #1F363D;
+}
+
+.enter-text {
+  color: #FFE17D;
+  font-size: 4em;
+  font-weight: 400;
+  text-shadow: 3px 3px #1F363D;
+}
