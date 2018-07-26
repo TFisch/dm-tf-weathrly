@@ -4,6 +4,7 @@ import './TenDayDisplay.css';
 
 
 export default function TenDayDisplay (props) {
+	// console.log(props)
 	return(
 		<ul className="tenDayCard">
 			{

@@ -1,26 +1,27 @@
-import React, { Component } from 'react';
 import { shallow, mount } from 'enzyme';
-import data from './Api.js';
-import filterWeather from './FilterWeatherData';
-
-let mockWeather = filterWeather(data);
-
+import React from 'react';
 import SevenHours from './SevenHours';
 
 describe('SevenHours', () => {
 	let wrapper;
-
-	let mock = {
-		time: '12:00 PM', temp: 47, icon: 'partlycloudy' 
-	}
-
+	let mock =  { time: '6:00 PM', temp: 45, icon: 'clear' } 
+	
 	beforeEach(() => {
-    wrapper = shallow(<SevenHours  />)
+		wrapper = shallow(<SevenHours  hour={mock}  />)
 	})
 
-
 	it('should exist', () => {
-		wrapper = shallow(<SevenHours time={mockWeather.hour.time} temp="30" src="cloudy" />);
 		expect(wrapper).toBeDefined();
-	});
+	})
+
+	it('should have props of hour, time and icon', () => {
+		wrapper = mount(<SevenHours  hour={mock}  />)
+		expect(wrapper.props().hour).toEqual({ time: '6:00 PM', temp: 45, icon: 'clear' })
+	})
+
+	it('should return a div with a list item and an image of current weather', () => {
+		expect(wrapper.find('.seven-day-wrapper').length).toEqual(1);
+		expect(wrapper.find('.seven-day-display').length).toEqual(1);
+		expect(wrapper.find('.weather-icon-seven').length).toEqual(1);
+	})
 });

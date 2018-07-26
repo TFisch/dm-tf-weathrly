@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './SevenHours.css';
 
-
-
 export default class SevenHours extends Component {
 	constructor(props) {
 		super();
@@ -20,4 +18,5 @@ export default class SevenHours extends Component {
 		);
 	}
 }
+
 
