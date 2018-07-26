@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './CurrentWeather.css';
-import { throws } from 'assert';
 
 class CurrentWeather extends Component {
-	constructor(props) {
+	constructor() {
 		super();
 
 	}

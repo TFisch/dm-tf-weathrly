@@ -21,7 +21,7 @@ describe('App', () => {
 			userLocationInput: '',
 			prefixTrie: null,
 			suggestions: []
-	  		});
+			});
 	});
 
 	it('should render a input field', () => {
@@ -54,13 +54,13 @@ describe('App', () => {
 		expect(wrapper.state().userLocationInput).toEqual('f');
 	});
 
-	// it('should display suggestions for letters entered if they match a location', () => {
-	// 	wrapper = mount(<Search />)
-	// 	let searchInput = wrapper.find('input')
+	it('should display suggestions for letters entered if they match a location', () => {
+		wrapper = mount(<Search />)
+		let searchInput = wrapper.find('input')
 	
-	// 	searchInput.simulate('change', { target: { value: 'San D' }} )
-	// 	expect(wrapper.state().suggestions).toEqual(['San Diego, CA'])
+		searchInput.simulate('change', { target: { value: 'San D' }} )
+		expect(wrapper.state().suggestions).toEqual(['San Diego, ca'])
 		
-	// })
+	})
 
 });
