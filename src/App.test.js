@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import App from './App';
-import { wrap } from 'module';
 
 describe('App', () => {
 	let wrapper;
@@ -38,28 +37,6 @@ describe('App', () => {
 
   it('should render a welcome component', () => {
     expect(wrapper.find("Welcome").length).toEqual(1)
-  })
-
-  it('should update states searched location to the city entered', () => {
-
-    const city = "Denver, CO"
-  
-    wrapper.instance().setLocation(city)
-    
-
-    expect(wrapper.state()).toEqual({ 
-      searchedLocation: 'Denver, CO',
-      currentCity: '',
-      currentDay: '',
-      currentTemp: null,
-      high: null,
-      low: null,
-      summary:'',
-      sevenHourCast: [],
-      tenDayCast: [],
-      isHidden: false,
-      image: "" 
-    })
   })
 
   it('should render a current weather, 7hour and 10 day component', () => {
