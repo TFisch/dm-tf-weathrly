@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import './TenDay.css'
+import React, { Component } from 'react';
+import './TenDay.css';
 
 
 export default class TenDay extends Component {
@@ -22,7 +22,7 @@ export default class TenDay extends Component {
 					<img className="weather-icon" src={require(`./images/${this.props.day.icon}.svg`)} />
 				</div>		
 			</li>
-		)
+		);
 	}
 }
 

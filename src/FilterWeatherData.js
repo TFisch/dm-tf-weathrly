@@ -8,21 +8,21 @@ function filterWeather (data) {
 		 summary: data.forecast.txt_forecast.forecastday[0].fcttext,
 		 image: data.current_observation.icon
 
-	}
+	};
 
 	const sevenHoursRaw = data.hourly_forecast.splice(0, 7);
 
 	const sevenHours = sevenHoursRaw.reduce((sevenHours, hour) => {
 
 		let hourObj = {time: hour.FCTTIME.civil,
-								temp: Math.floor(hour.temp.english),
-								icon: hour.icon
-	}
-	sevenHours.push(hourObj)
-	return sevenHours
-	}, [])
+			temp: Math.floor(hour.temp.english),
+			icon: hour.icon
+		};
+		sevenHours.push(hourObj);
+		return sevenHours;
+	}, []);
 
-	const tenDayArray = data.forecast.simpleforecast.forecastday.splice(0, 10)
+	const tenDayArray = data.forecast.simpleforecast.forecastday.splice(0, 10);
 
 	const tenDaysRaw = tenDayArray.reduce((tenDay, day) => {
 		let dayObj = {
@@ -30,12 +30,12 @@ function filterWeather (data) {
 			high: day.high.fahrenheit,
 			low: day.low.fahrenheit,
 			icon: day.icon
-		}
-		tenDay.push(dayObj)
-		return tenDay
-	}, [])
+		};
+		tenDay.push(dayObj);
+		return tenDay;
+	}, []);
 
-	return {currentWeather, sevenHours, tenDaysRaw}
+	return {currentWeather, sevenHours, tenDaysRaw};
 }
 
 export default filterWeather;

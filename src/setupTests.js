@@ -6,24 +6,24 @@ configure({ adapter: new Adapter(), disableLifecycleMethods: true });
 
 class localStorage {
 
-        constructor() {
-            this.store = {}
-          }
+	constructor() {
+		this.store = {};
+	}
         
-          clear() {
-            this.store = {};
-          }
+	clear() {
+		this.store = {};
+	}
         
-          getItem(key) {
-            return this.store[key] || null
-          }
+	getItem(key) {
+		return this.store[key] || null;
+	}
         
-          setItem(key, value) {
-            this.store[key] = value
-          }
+	setItem(key, value) {
+		this.store[key] = value;
+	}
         
-          removeItem(key) {
-            delete this.store[key]
-          }
-        }
+	removeItem(key) {
+		delete this.store[key];
+	}
+}
 global.localStorage = new localStorage;
