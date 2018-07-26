@@ -6,7 +6,7 @@ function filterWeather (data) {
 		 high: data.forecast.simpleforecast.forecastday[0].high.fahrenheit,
 		 low: data.forecast.simpleforecast.forecastday[0].low.fahrenheit,
 		 summary: data.forecast.txt_forecast.forecastday[0].fcttext,
-		 image: data.current_observation.icon_url
+		 image: data.current_observation.icon
 
 	}
 
