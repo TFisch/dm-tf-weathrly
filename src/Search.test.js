@@ -2,14 +2,15 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import Search from './Search';
+import { wrap } from 'module';
 
 describe('App', () => {
 	let wrapper;
 
 	beforeEach(() => {
     wrapper = shallow(<Search />)
-		localStorage.clear();
-		})
+	localStorage.clear();
+	})
 		
 	it('should exsist', () => {
 		expect(wrapper).toBeDefined()
@@ -17,7 +18,7 @@ describe('App', () => {
 
 	it('should have default state values', () => {
 		expect(wrapper.state()).toEqual({
-			userLocationInput: props.searchedLocation,
+			userLocationInput: '',
 			prefixTrie: null,
 			suggestions: []
 		})
@@ -31,16 +32,26 @@ describe('App', () => {
 		expect(wrapper.find("button").length).toEqual(1)
 	})
 
-	it('should update state when a key is pressed', () => {
-		let searchInput = wrapper.find('input')
-		
-		wrapper.instance().handleChange()
+	it('should call handle change when a key is pressed', () => {
+		// wrapper.instance().handleChange = jest.fn();
+		// wrapper.instance().displaySuggestions = jest.fn();
 
-		searchInput.simulate('change', { target: { value: 'foo' }} )
-		expect(wrapper.state().userLocationInput).toEqual('foo')
+        // let searchInput = wrapper.find('input');
+
+        // searchInput.simulate('change', { target: { value: 'f' }} )
+		
+		// expect(jest.fn().mock.calls.length).toEqual(1)
+		// expect(wrapper.instance().handleChange).toHaveBeenCalledTimes(1)
+		
+		// expect(wrapper.instance().displaySuggestions).toHaveBeenCalled();
+		// expect(wrapper.instance().displaySuggestions).toHaveBeenCalledTimes(1)
 	})
 
+	// it('should update state when a key is pressed', () => {
+	// 	let searchInput = wrapper.find('input')
+	
+	// 	searchInput.simulate('change', { target: { value: 'f' }} )
+	// 	expect(wrapper.state().userLocationInput).toEqual('f')
+	// })
 
-
-    
 })

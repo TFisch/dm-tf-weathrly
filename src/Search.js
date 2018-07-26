@@ -8,11 +8,10 @@ export default class Search extends Component {
 	constructor(props) {
 		super();
 		this.state = {
-			userLocationInput: props.searchedLocation,
+			userLocationInput: '',
 			prefixTrie: null,
 			suggestions: []
 		}
-		// this.suggestions = []
 
 }
 
@@ -34,9 +33,6 @@ export default class Search extends Component {
 		let suggestions = this.state.prefixTrie.suggest(userLetters).splice(0,4);
 		this.setState({ suggestions: suggestions })
 	}
-
-
-
 
 	render() {
 		return(
