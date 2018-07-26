@@ -91,7 +91,7 @@ export default class App extends Component {
 								currentCity={this.state.currentCity} 
 								currentDay={this.state.currentDay} 
 								currentTemp={this.state.currentTemp + 'º'}  
-								high={this.state.high}
+								high={this.state.high + " /"}
 								low={this.state.low}
 								summary={this.state.summary}
 								image={this.state.image}
