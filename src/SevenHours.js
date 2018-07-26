@@ -6,7 +6,6 @@ import './SevenHours.css'
 export default class SevenHours extends Component {
   constructor(props) {
     super();
-
   }
 
   render() {

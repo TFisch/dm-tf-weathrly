@@ -21,7 +21,7 @@ describe('App', () => {
 			userLocationInput: '',
 			prefixTrie: null,
 			suggestions: []
-		})
+	  		})
 	})
 
 	it('should render a input field', () => {

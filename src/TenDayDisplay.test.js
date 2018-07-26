@@ -32,7 +32,7 @@ describe('TenDayDisplay', () => {
 
 	it('should have a icon url that matches the weather for the day', () => {
 		wrapper = mount(<TenDayDisplay tenDayCast={mockWeather.tenDaysRaw} />)
-		expect(wrapper.props().tenDayCast[0].icon).toEqual('http://icons.wxug.com/i/c/k/partlycloudy.gif')
+		expect(wrapper.props().tenDayCast[0].icon).toEqual('partlycloudy')
 	})
 
 })
