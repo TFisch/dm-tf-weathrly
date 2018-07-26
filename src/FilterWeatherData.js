@@ -6,7 +6,7 @@ function filterWeather (data) {
 		 high: data.forecast.simpleforecast.forecastday[0].high.fahrenheit,
 		 low: data.forecast.simpleforecast.forecastday[0].low.fahrenheit,
 		 summary: data.forecast.txt_forecast.forecastday[0].fcttext,
-		 image: data.current_observation.icon_url
+		 image: data.current_observation.icon
 
 	}
 
@@ -16,7 +16,7 @@ function filterWeather (data) {
 
 		let hourObj = {time: hour.FCTTIME.civil,
 								temp: Math.floor(hour.temp.english),
-								icon: hour.icon_url
+								icon: hour.icon
 	}
 	sevenHours.push(hourObj)
 	return sevenHours
@@ -29,7 +29,7 @@ function filterWeather (data) {
 			day: day.date.weekday,
 			high: day.high.fahrenheit,
 			low: day.low.fahrenheit,
-			icon: day.icon_url
+			icon: day.icon
 		}
 		tenDay.push(dayObj)
 		return tenDay
