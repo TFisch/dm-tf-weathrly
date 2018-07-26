@@ -16,7 +16,7 @@ function filterWeather (data) {
 
 		let hourObj = {time: hour.FCTTIME.civil,
 								temp: Math.floor(hour.temp.english),
-								icon: hour.icon_url
+								icon: hour.icon
 	}
 	sevenHours.push(hourObj)
 	return sevenHours

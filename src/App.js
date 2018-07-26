@@ -61,7 +61,7 @@ export default class App extends Component {
       isHidden: false,
       searchedLocation: search
     }))
-    .catch(err => alert('hey this is not a valid loaction please enter another'))
+    // .catch(err => alert('hey this is not a valid loaction please enter another'))
     // this.setState({ searchedLocation: ''})
     // window.location.reload()
 
