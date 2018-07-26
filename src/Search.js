@@ -19,7 +19,6 @@ export default class Search extends Component {
 	handleChange(e) {
 		this.setState({userLocationInput: e.target.value})
 		this.displaySuggestions(e.target.value)
-		console.log(this.state.userLocationInput) 
 	}
 
 	componentDidMount() {
@@ -32,7 +31,7 @@ export default class Search extends Component {
 
 	displaySuggestions(userLetters){
 		// this.suggestions = this.state.userLocationInput
-		let suggestions = this.state.prefixTrie.suggest(userLetters)
+		let suggestions = this.state.prefixTrie.suggest(userLetters).splice(0,4);
 		this.setState({ suggestions: suggestions })
 	}
 
@@ -42,10 +41,11 @@ export default class Search extends Component {
 	render() {
 		return(
 			<div className="search-wrap">	
-				<input className="location-input" type="text" value={this.state.userLocationInput} onChange={(e) => this.handleChange(e)} />
+				<input className="location-input" list="sugg" type="text" value={this.state.userLocationInput} onChange={(e) => this.handleChange(e)} />
 				<div className="suggestList">
-				<ul className="suggest">{this.state.suggestions.map(suggestion => <li>{suggestion}</li>)}</ul>
+				<datalist className="suggest" id="sugg">{this.state.suggestions.map(suggestion => <option>{suggestion}</option>)}</datalist>
 				</div>
+		
 				<button className="submit" onClick= {() =>	this.props.setLocation(this.state.userLocationInput)}>submit</button>
 			</div>
 		) 
