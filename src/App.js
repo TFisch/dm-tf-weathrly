@@ -29,7 +29,8 @@ export default class App extends Component {
     this.setLocation = this.setLocation.bind(this)
   }
   setLocation(search) {
-    this.setState({ searchedLocation: search, isHidden: false }, this.getWeather);
+    // this.setState({ searchedLocation: search, isHidden: false }, this.getWeather);
+    this.getWeather(search)
     localStorage.setItem('savedLocation', search);
   }
 
@@ -43,8 +44,8 @@ export default class App extends Component {
 
   }
 
-  getWeather() {
-    fetch(`http://api.wunderground.com/api/${Key}/geolookup/conditions/hourly/forecast10day/q/${this.state.searchedLocation}.json`)
+  getWeather(search) {
+    fetch(`http://api.wunderground.com/api/${Key}/geolookup/conditions/hourly/forecast10day/q/${search}.json`)
     .then(response => response.json())
     .then(data => filterWeather(data))
     .then(weatherObj => this.setState({
@@ -56,12 +57,13 @@ export default class App extends Component {
       summary: weatherObj.currentWeather.summary,
       sevenHourCast: weatherObj.sevenHours,
       tenDayCast: weatherObj.tenDaysRaw,
-      image: weatherObj.currentWeather.image
+      image: weatherObj.currentWeather.image,
+      isHidden: false,
+      searchedLocation: search
     }))
-    // .catch( alert('hey this is not a valid loaction please enter another')),
+    .catch(err => alert('hey this is not a valid loaction please enter another'))
     // this.setState({ searchedLocation: ''})
     // window.location.reload()
-  
 
   }
 

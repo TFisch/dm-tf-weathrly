@@ -45,6 +45,7 @@ describe('App', () => {
     const city = "Denver, CO"
   
     wrapper.instance().setLocation(city)
+    
 
     expect(wrapper.state()).toEqual({ 
       searchedLocation: 'Denver, CO',
