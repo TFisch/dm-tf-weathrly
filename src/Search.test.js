@@ -33,25 +33,34 @@ describe('App', () => {
 	})
 
 	it('should call handle change when a key is pressed', () => {
-		// wrapper.instance().handleChange = jest.fn();
-		// wrapper.instance().displaySuggestions = jest.fn();
+		wrapper = mount(<Search />)
 
-        // let searchInput = wrapper.find('input');
+		wrapper.instance().handleChange = jest.fn();
+		
+        let searchInput = wrapper.find('input');
 
-        // searchInput.simulate('change', { target: { value: 'f' }} )
+        searchInput.simulate('change', { target: { value: 'f' }} )
 		
-		// expect(jest.fn().mock.calls.length).toEqual(1)
-		// expect(wrapper.instance().handleChange).toHaveBeenCalledTimes(1)
+		expect(wrapper.instance().handleChange).toHaveBeenCalled();
+		expect(wrapper.instance().handleChange).toHaveBeenCalledTimes(1)
 		
-		// expect(wrapper.instance().displaySuggestions).toHaveBeenCalled();
-		// expect(wrapper.instance().displaySuggestions).toHaveBeenCalledTimes(1)
 	})
 
-	// it('should update state when a key is pressed', () => {
+	it('should update state when a key is pressed', () => {
+		wrapper = mount(<Search />)
+		let searchInput = wrapper.find('input')
+	
+		searchInput.simulate('change', { target: { value: 'f' }} )
+		expect(wrapper.state().userLocationInput).toEqual('f')
+	})
+
+	// it('should display suggestions for letters entered if they match a location', () => {
+	// 	wrapper = mount(<Search />)
 	// 	let searchInput = wrapper.find('input')
 	
-	// 	searchInput.simulate('change', { target: { value: 'f' }} )
-	// 	expect(wrapper.state().userLocationInput).toEqual('f')
+	// 	searchInput.simulate('change', { target: { value: 'San D' }} )
+	// 	expect(wrapper.state().suggestions).toEqual(['San Diego, CA'])
+		
 	// })
 
 })
