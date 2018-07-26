@@ -39,7 +39,7 @@ export default class Search extends Component {
 			<div className="search-wrap">	
 				<input className="location-input" list="sugg" type="text" value={this.state.userLocationInput} onChange={(e) => this.handleChange(e)} />
 				<div className="suggestList">
-					<datalist className="suggest" id="sugg">{this.state.suggestions.map((suggestion, index) => <option>{suggestion}</option>)}</datalist>
+					<datalist className="suggest" id="sugg">{this.state.suggestions.map((suggestion, index) => <option key={index}>{suggestion}</option>)}</datalist>
 				</div>
 		
 				<button className="submit" onClick= {() =>	this.props.setLocation(this.state.userLocationInput)}>submit</button>
