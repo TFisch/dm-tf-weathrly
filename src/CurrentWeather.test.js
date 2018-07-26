@@ -39,6 +39,11 @@ describe('SevenHourDisplay', () => {
 			expect(wrapper.props().high).toEqual('51')
 			expect(wrapper.props().low).toEqual('32')
 			expect(wrapper.props().summary).toEqual('Sun and clouds mixed. High 51F. Winds NE at 10 to 15 mph.')
-			expect(wrapper.props().image).toEqual('http://icons.wxug.com/i/c/k/mostlycloudy.gif')
+			expect(wrapper.props().image).toEqual('mostlycloudy')
 	})
+	it('should return a weather card div with an image', () => {
+		expect(wrapper.find(".weather-card").length).toEqual(1)
+		expect(wrapper.find(".current-weather-icon").length).toEqual(1)
+	})
+
 })

@@ -41,7 +41,6 @@ export default class App extends Component {
     } else {
       return
     }
-
   }
 
   getWeather(search) {
@@ -61,15 +60,8 @@ export default class App extends Component {
       isHidden: false,
       searchedLocation: search
     }))
-<<<<<<< Updated upstream
-    // .catch(err => alert('hey this is not a valid loaction please enter another'))
-    // this.setState({ searchedLocation: ''})
-    // window.location.reload()
-
-=======
     .catch(err => alert('hey this is not a valid loaction please enter another'))
       localStorage.clear()
->>>>>>> Stashed changes
   }
 
   render() {

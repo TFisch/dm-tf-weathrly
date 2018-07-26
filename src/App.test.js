@@ -12,7 +12,6 @@ describe('App', () => {
 	})
 
 	it('should exist', () => {
-	
 		expect(wrapper).toBeDefined();
   })
 
