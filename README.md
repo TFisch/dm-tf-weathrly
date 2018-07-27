@@ -8,3 +8,10 @@ In this project you will be getting your first real interactions with ReactJS, a
 **Wireframe**
 
 ![wireframe](src/images/wireframe.jpg "Wireframe")
+
+**Screenshots**
+
+
+![welcome-display](src/images/wireframe.jpg "Welcome")
+
+![weather-display](src/images/wireframe.jpg "Weather")
