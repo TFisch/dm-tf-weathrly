@@ -12,6 +12,6 @@ In this project you will be getting your first real interactions with ReactJS, a
 **Screenshots**
 
 
-![welcome-display](src/images/wireframe.jpg "Welcome")
+![welcome-display](src/images/welcome-screen.png "Welcome")
 
-![weather-display](src/images/wireframe.jpg "Weather")
+![weather-display](src/images/weather-screen.png "Weather")
