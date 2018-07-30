@@ -10,9 +10,9 @@
 }
 
 .current-temp {
+  color: #FFE17D;
   font-size: 9em;
   font-weight: bold;
-  color: #FFE17D;
   margin: auto;
   text-shadow: 5px 6px #1F363D;
 }
@@ -23,10 +23,10 @@
 .current-high, 
 .current-low, 
 .current-summary {
+  color: #FFE17D;
   font-size: 2.05em;
   font-weight: 400;
   margin: .50em;
-  color: #FFE17D;
   text-shadow: 2px 2px #1F363D;
 }
 
@@ -47,10 +47,10 @@
 }
 
 .divide {
+  color: #FFE17D;
   font-size: 2em;
   font-weight: 400;
   margin: .50em;
-  color: #FFE17D;
   text-shadow: 2px 2px #1F363D;
 }
 
