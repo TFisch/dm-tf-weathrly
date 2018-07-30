@@ -57,11 +57,8 @@ describe('App', () => {
 		expect(wrapper.find('CurrentWeather')).toBeDefined();
 		expect(wrapper.find('CurrentWeather').length).toEqual(1);
 
-		expect(wrapper.find('SevenHourDisplay')).toBeDefined();
-		expect(wrapper.find('SevenHourDisplay').length).toEqual(1);
-
-		expect(wrapper.find('TenDayDisplay')).toBeDefined();
-		expect(wrapper.find('TenDayDisplay').length).toEqual(1);
+		expect(wrapper.find('Card')).toBeDefined();
+		expect(wrapper.find('Card').length).toEqual(1);
 	});
 
 });

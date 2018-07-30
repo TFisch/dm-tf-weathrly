@@ -1,10 +1,10 @@
 .app-title {
   color: #FFE17D;
   font-size: 3em;
-  text-shadow: 2px 2px #1F363D;
   font-weight: 400;
   justify-content: center;
   margin: auto 0;
+  text-shadow: 2px 2px #1F363D;
 }
 
 .weather-icon {
