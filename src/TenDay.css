@@ -1,8 +1,6 @@
-.ten-day-wrapper {
-  display: flex;
+.day-header {
+  font-size: 2.5em;
   margin: auto 0;
-  width: 13em;
-  font-size: 1em;
 }
 
 .day-wrap {
@@ -10,9 +8,16 @@
   flex-direction: column;
 }
 
-.day-header {
+.high-low {
+  align-items: center;
+  display: flex;
+}
+
+.ten-day-wrapper {
+  display: flex;
+  font-size: 1em;
   margin: auto 0;
-  font-size: 2.5em;
+  width: 13em;
 }
 
 .wrap-horiz {
@@ -24,9 +29,4 @@
 
 .weather-icon {  
   width: 6em;
-}
-
-.high-low {
-  display: flex;
-  align-items: center;
 }
