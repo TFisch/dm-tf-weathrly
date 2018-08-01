@@ -1,13 +1,13 @@
+button:focus {
+  outline:0;
+}
+
 input[type=text] {
   background-color: #E9F1F7;
   font-family: 'Cuprum', sans-serif;
   font-size: 1em;
   padding: 0;
   margin: 0;
-}
-
-button:focus {
-  outline:0;
 }
 
 .location-input{
