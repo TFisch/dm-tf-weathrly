@@ -1,19 +1,8 @@
-
-
-.current-temp {
-  font-size: 9em;
-  font-weight: bold;
-  color: #FFE17D;
-  margin: auto;
-  text-shadow: 5px 6px #1F363D;
-}
-
-
 .curr {
+  color: #FFE17D;
   font-size: 2.05em;
   font-weight: 400;
   margin: .50em;
-  color: #FFE17D;
   text-shadow: 2px 2px #1F363D;
 }
 
@@ -21,23 +10,30 @@
   width: 170%;
 }
 
-
-.high-low {
-  display: flex;
-}
-
-.divide {
-  font-size: 2em;
-  font-weight: 400;
-  margin: .50em;
+.current-temp {
   color: #FFE17D;
-  text-shadow: 2px 2px #1F363D;
+  font-size: 9em;
+  font-weight: bold;
+  margin: auto;
+  text-shadow: 5px 6px #1F363D;
 }
 
 .current-weather-icon {
   height: 18em;
   margin-right: 5em;
   width: 18em;
+}
+
+.divide {
+  color: #FFE17D;
+  font-size: 2em;
+  font-weight: 400;
+  margin: .50em;
+  text-shadow: 2px 2px #1F363D;
+}
+
+.high-low {
+  display: flex;
 }
 
 .temp-span-left {
@@ -47,7 +43,6 @@
 .temp-span-right {
   margin-left: -0.87em;
 }
-
 
 .weather-card {
 	background-color: #6D7E91;
