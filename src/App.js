@@ -6,8 +6,7 @@ import Greeting from './Greeting';
 import Key from './Key';
 import Search from './Search.js';
 import filterWeather from './FilterWeatherData';
-import SevenHourDisplay from './SevenHourDisplay';
-import TenDayDisplay from './TenDayDisplay.js';
+import Card from './Card.js'
 
 export default class App extends Component {
 	constructor() {
@@ -30,7 +29,6 @@ export default class App extends Component {
 		this.setLocation = this.setLocation.bind(this);
 	}
 	setLocation(search) {
-		// this.setState({ searchedLocation: search, isHidden: false }, this.getWeather);
 		this.getWeather(search);
 		localStorage.setItem('savedLocation', search);
 	}
@@ -96,9 +94,8 @@ export default class App extends Component {
 								summary={this.state.summary}
 								image={this.state.image}
 							/>
-							<SevenHourDisplay sevenHourCast={this.state.sevenHourCast} />
 						</div>
-						<TenDayDisplay tenDayCast={this.state.tenDayCast} />
+						<Card sevenHourCast={this.state.sevenHourCast} tenDayCast={this.state.tenDayCast}/>
 					</div>
 				</div>
 			);

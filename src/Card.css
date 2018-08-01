@@ -1,0 +1,32 @@
+.sevenHourCard {
+  background-color: #6D7E91;
+  border: 2px solid black;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 31.77em;
+  margin-left: 65em;
+  margin-top: -32em;
+  padding: 0;
+	position: absolute;
+  width: 15.7em;
+}
+
+.tenDayCard{
+  background-color: #6D7E91;
+  border: 2px solid black;
+  color: #FFE17D;
+  display: flex;
+  font-size: .55em;
+  height: 18em;
+  margin-left: 14.86em;
+  text-shadow: 2px 2px #1F363D;
+  width: 124em;
+}
+
+.cardDisplay {
+  display: flex;
+}
+
+
