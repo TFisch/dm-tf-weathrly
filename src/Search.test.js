@@ -12,7 +12,7 @@ describe('App', () => {
 		localStorage.clear();
 	});
 		
-	it('should exsist', () => {
+	it('should exist', () => {
 		expect(wrapper).toBeDefined();
 	});
 
