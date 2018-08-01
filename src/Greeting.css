@@ -6,6 +6,13 @@
   width: 70%;
 }
 
+.enter-text {
+  color: #FFE17D;
+  font-size: 4em;
+  font-weight: 400;
+  text-shadow: 3px 3px #1F363D;
+}
+
 .welcome-text {
   color: #FFE17D;
   font-size: 4em;
@@ -15,9 +22,3 @@
   text-shadow: 3px 3px #1F363D;
 }
 
-.enter-text {
-  color: #FFE17D;
-  font-size: 4em;
-  font-weight: 400;
-  text-shadow: 3px 3px #1F363D;
-}

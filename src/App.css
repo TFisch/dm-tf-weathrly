@@ -1,14 +1,14 @@
-body {
-  background-color: #E9F1F7;
-  font-family: 'Cuprum', sans-serif;
-}
-
 .banner {
   background-color: #6D7E91;
   border-bottom: solid 2px #1F363D;
   display: flex;
-  justify-content: space-between;
   height: 4em;
+  justify-content: space-between;
+}
+
+body {
+  background-color: #E9F1F7;
+  font-family: 'Cuprum', sans-serif;
 }
 
 .upper-container {
