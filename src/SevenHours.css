@@ -1,5 +1,22 @@
-ul {
-  list-style-type: none;
+.hour-text {
+  color: #FFE17D;
+  font-size: 1em;
+  margin: auto 0;
+  padding: 0;
+  text-align: left;
+  text-shadow: 2px 2px #1F363D;
+}
+
+.proj-temp-text {
+  font-size: 2em;
+  margin: auto;
+}
+
+.seven-day-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto 0;
+  width: 15.5em;
 }
 
 .seven-day-display {
@@ -12,27 +29,8 @@ ul {
   width: 10em;
 }
 
-.hour-text {
-  color: #FFE17D;
-  text-align: left;
-  text-shadow: 2px 2px #1F363D;
-  font-size: 1em;
-  margin: auto 0;
-  padding: 0;
-}
-
-.proj-temp-text {
-  font-size: 2em;
-  margin: auto;
-
-}
-
-.seven-day-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  margin: auto 0;
-
-  width: 15.5em;
+ul {
+  list-style-type: none;
 }
 
 .weather-icon-seven {
